@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Creating model</title>
+<script src="frontend/keylemon.min.js"></script>
+</head>
+
+<body>
+<div id="keylemon"></div>
+
+
+<script>
+   require(['keylemon'], function (keylemon) {
+          keylemon.init({
+			  
+                    modality: "speaker",
+                    func: "create_identity",
+                    floating: {
+                        closable: false
+                    },
+                    preview: {
+                        width: 466,
+                        height: 350
+                    },
+                    nbAuthenticationMax: 5,
+                    bootstrap: false,
+                    fontawesome: true,                    
+                    lng : "en",
+			  
+			  
+			  
+              target : '#keylemon',
+              backendUrl : "backend/keylemon.php",
+              bundlePath : "frontend",
+			  onInitialized: function(){
+				  console.log("initial");
+				  //alert("init");
+			  },
+              onIdentityCreated : function(identity_id, model_id){
+                  // biometric model and identity successfully created
+ 						alert('id created');
+	              // do what you need to do
+              },
+              onFinish : function(authenticated, liveness){
+                  // process terminated and user successfully test his identity
+ 					alert("test success");
+					console.log("test success");
+					// do what you need to do
+              },
+			  onError : function(error){
+				  alert(error);
+				  console.log(error);
+			  }
+        })
+    })
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>KeyLemon test</title>
+    <script src="../frontend/keylemon.min.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <script>
+            require(['keylemon'], function (keylemon) {
+                keylemon.init({
+                    modality: "face",
+                    func: "create_identity",
+                    target: '#container',
+                    backendUrl: "../backend",
+                    bundlePath: "../frontend",
+                    floating: false,
+                    preview: {
+                        width: 320,
+                        height: 240
+                    },
+                    faceDetect: true,
+                    eyeBlink: true,
+                    nbAuthenticationMax: 2,
+                    bootstrap: true,
+                    fontawesome: true,
+                    onIdentityCreated: function (identity_id) {
+                        alert("identity id created : " + identity_id)
+                    },
+                    onFinish: function (authenticated, liveness) {
+                        alert("authenticated : " + authenticated + "\nliveness : " + liveness)
+                    },
+                    onInitialized : function(){
+                        // Library completely loaded and intialized
+                    }
+                })
+            })
+        </script>
+</div></body>
+
+</html>

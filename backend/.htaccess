@@ -1,0 +1,9 @@
+# Even better : put these rules directly into your Apache
+# configuration file under a Directory section. 
+RewriteEngine On
+# RewriteBase /backend/
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule . /backend/keylemon.php [L,QSA]
+#Alias /backend /backend/keylemon.php
+

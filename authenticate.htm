@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Idlinc - Authentication</title>
+<script src="frontend/keylemon.min.js"></script>
+</head>
+
+<body>
+<div id="keylemon"></div>
+
+<script type="text/javascript">
+        require(['keylemon'], function (keylemon) {
+              keylemon.init({
+                  modality : "face",
+                  func : "authenticate",
+                  target : '#keylemon',
+                  backendUrl : "backend/keylemon.php",
+             	  bundlePath : "frontend",
+			      floating : false,
+                  preview : {
+                      width : 320,
+                      height: 240
+                  },
+                  faceDetect :  true,
+                  eyeBlink :    true,
+                  nbAuthenticationMax : 2,
+                  bootstrap :   true,
+                  fontawesome : true,
+                  onFinish : function(authenticated, liveness){ 
+                      alert("authenticated : " + authenticated + "\nliveness : " + liveness)
+                  },
+                  onInitialized : function(){
+                    // Library completely loaded and intialized
+                  }
+            })
+        })
+</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+{
+    "yes": "oui",
+    "no": "non",
+    "ok": "ok",
+    "face": {
+        "enrollment_instruction": "Nous allons maintenant capturer une série d'images à partir de la webcam afin de créer votre modèle de visage. Cliquez sur démarrer lorsque vous êtes prêt.",
+        "addmodel_instruction": "Cliquez sur démarrer lorsque vous êtes prêt à ajouter un nouveau modèle de visage à votre identité",
+        "allow_webcam": "Veuillez autoriser l'accès à votre webcam",
+        "authenticate_instruction": "Cliquez sur test lorsque vous êtes prêt à vérifier votre identité",
+        "rebuild_instruction": "Quand vous avez enlevé les mauvaises images, cliquez sur réentrainer. De nouvelles images seront capturées afin de compléter l'album ...",
+        "test_instruction": "Cliquez sur test lorsque vous êtes prêt à tester votre modèle",
+        "addmodel_question": "Voulez-vous ajouter un autre modèle de visage? Il peut être une bonne idée d'avoir plusieurs modèles, par exemple un modèle sans lunettes si vous en portez",
+        "listmodel_empty": "Cette identité n'a pas de modèles.",
+        "models_resumee": "Modèles de l'identité",
+        "face_too_small": "Visage trop petit",
+        "non_detected": "Aucun visage détecté",
+        "no_eye_blink": "Aucun signe de vie!",
+        "eye_blink_instruction": "Clignez des yeux"
+    },
+    "process": {
+        "capturing_faces": "Capture de votre visage pour le modèle biométrique, restez naturel",
+        "creating_model": "Patientez pendant la création de modèle biométrique ...",
+        "streaming": "Envoi du flux, restez naturel",
+        "authenticating": "Authentification ..."
+    },
+    "result": {
+        "authenticated": "Vous avez été authentifié",
+        "non_authenticated": "Vous n'avez pas été authentifié"
+    },
+    "button": {
+        "processing": "traitement ...",
+        "waiting": "patientez ...",
+        "enroll": "démarrer",
+        "start": "démarrer",
+        "test": "test",
+        "retrain": "réentrainer",
+        "restart_enrollment": "recommencer",
+        "capture": "capture",
+        "delete": "supprimer"
+    },
+    "alert": {
+        "confirm_title": "Confirmer",
+        "authenticated": "Authentifié",
+        "non_authenticated": "Rejeté",
+        "confirm_delete": "Etes-vous sûr de vouloir supprimer ce modèle de votre identité?"
+    },
+    "error": {
+        "error_occurred": "Une erreur s'est produite",
+        "image_rejected": "Certaines images ont été rejetées pour l'opération",
+        "not_enough_face": "Votre modèle ne contient pas assez de visages, s'il vous plaît réessayer ...",
+        "function_not_available": "La fonction que vous avez demandé n'est pas disponible",
+        "server_error": "Erreur avec le serveur d'authentification",
+        "webcam_required": "L'accès à la webcam doit être autorisé.",
+        "no_input_device": "Aucun périphérique d'entrée détecté",
+        "bad_model": "Votre modèle ne semble pas bon, le processus va recommencer",
+        "face_detect_slow": "La détection des visages a été désactivée"
+    }
+}
